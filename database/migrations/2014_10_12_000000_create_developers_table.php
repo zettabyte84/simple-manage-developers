@@ -21,7 +21,7 @@ class CreateDevelopersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone_number');
-            $table->text('address');
+            $table->text('address')->nullable();
             $table->text('avatar');
             $table->rememberToken();
             $table->timestamps();
