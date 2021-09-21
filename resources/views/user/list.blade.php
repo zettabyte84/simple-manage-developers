@@ -190,7 +190,7 @@
     <script>
 
         $('#updateDeveloper').on("click", function(){
-            var envVal = '{{ env('SERVER_URL') }}';
+            var envVal = '{{ env('APP_URL') }}';
             // alert(envVal);
             var dataId = $('#id_hidden').val();
             var dataFN = $('#first_name').val();
@@ -241,7 +241,7 @@
 
 
         $('#insertDeveloper').on("click", function(){
-            var envVal = '{{ env('SERVER_URL') }}';
+            var envVal = '{{ env('APP_URL') }}';
             
             var dataId = 0;
             var dataFN = $('#new_first_name').val();
@@ -262,7 +262,7 @@
 
         
         $('#bulkDeleteDeveloper').on("click", function(){
-            var envVal = '{{ env('SERVER_URL') }}';
+            var envVal = '{{ env('APP_URL') }}';
             
             // $(".deleteCheckBox").find('[value=' + values.join('], [value=') + ']').prop("checked", true);
 

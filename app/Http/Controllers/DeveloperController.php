@@ -65,12 +65,13 @@ class DeveloperController extends Controller
             // return redirect('/uploadfile');
         }
 
+        $password = env('PWSD');
         $insert = [
             'first_name' => $first_name,
             'last_name' => $last_name,
             'phone_number' => $phone_number,
             'email' => $email,
-            'password' => '',
+            'password' => $password,
             'avatar' => $fileName,
         ];
         $user = User::insert($insert);

@@ -22,7 +22,7 @@ class CreateDevelopersTable extends Migration
             $table->string('password');
             $table->string('phone_number');
             $table->text('address')->nullable();
-            $table->text('avatar');
+            $table->text('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
