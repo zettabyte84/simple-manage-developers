@@ -276,15 +276,16 @@
               if(delete_check_box==""){
                 alert("No records selected");
               }else{
-                alert("Your favourite programming languages are: " + delete_check_box);
+                if(confirm("You are going to delete some developers. Confirm?")){
                     
-                var custom_url = envVal+"developer/bulkDelete?delete_check_box_value="+delete_check_box;
-                
-                $.ajax({url: custom_url, success: function(result){
+                    var custom_url = envVal+"developer/bulkDelete?delete_check_box_value="+delete_check_box;
                     
-                    var jsonData = JSON.parse(result);
-                    location.reload();
-                }});
+                    $.ajax({url: custom_url, success: function(result){
+                        
+                        var jsonData = JSON.parse(result);
+                        location.reload();
+                    }});
+                }
               }
             
         });

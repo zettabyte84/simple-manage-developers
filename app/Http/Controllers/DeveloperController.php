@@ -50,6 +50,13 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:developers'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'phone_number' => ['required', 'string', 'max:255'],
+        ]);
         // $id = $request->id;
         $first_name = $request->new_first_name;
         $last_name = $request->new_last_name;
